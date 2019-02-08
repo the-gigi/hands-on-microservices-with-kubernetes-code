@@ -6,7 +6,7 @@ spec:
   containers:
   - name: some-container
     image: busybox
-    command: [ "/bin/sh", "-c", "watch echo \"superhero: $SUPERHERO villain: $VILLAIN\"" ]
+    command: [ "/bin/sh", "-c", "watch 'echo \"superhero: $SUPERHERO villain: $VILLAIN\"'" ]
     envFrom:
     - configMapRef:
         name: env-config
