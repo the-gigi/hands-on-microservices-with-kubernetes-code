@@ -6,5 +6,5 @@ spec:
   containers:
   - name: sleeper
     image: busybox
-    command: [ command: ["/bin/bash", "-c", "while true ; do sleep 10 ; done"] ]
+    command: ["/bin/bash", "-c", "while true ; do sleep 10 ; done"]
   restartPolicy: Never
