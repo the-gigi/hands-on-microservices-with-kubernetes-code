@@ -1,3 +1,4 @@
+import os
 import subprocess
 
 
@@ -9,7 +10,8 @@ def run(cmd):
 
 def login():
     host = 'localhost:8080'
-    cmd = f'login {host} --insecure --username admin --password password'
+    password = os.environ['ARGOCD_PASSWORD']
+    cmd = f'login {host} --insecure --username admin --password {password}'
     output = run(cmd)
     print(output)
 
