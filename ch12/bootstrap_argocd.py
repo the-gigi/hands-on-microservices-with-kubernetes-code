@@ -53,13 +53,13 @@ def create_app(name, project, namespace, repo, path):
 
 def main():
     login()
-    project = 'delinkcious'
+    project = 'default'
     ns = 'default'
     description = 'Delicious-like link management system'
     repo = 'https://github.com/the-gigi/delinkcious'
     # create_project(project, 'https://kubernetes.default.svc', ns, '', repo)
     for app in 'link social-graph user news api-gateway'.split():
-        service = app.replace('-', '_') + _service
+        service = app.replace('-', '_') + '_service'
         create_app(app, project, ns, repo, f'svc/{service}/k8s')
 
 
